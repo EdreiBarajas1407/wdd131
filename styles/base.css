@@ -2,6 +2,14 @@
     --primary-color: #63768D;
     --secondary-color: #8AC6D0;
     --accent-1: #72BDA3;
+
+    --font-family: "Mulish", sans-serif;
+    --primary-heading-size: 2.5rem;
+    --primary-heading-weight: 800;
+    --secondary-headings-size: 1.5rem;
+    --secondary-heading-weight: 600;
+    --paragraph-size: 1rem;
+    --paragraph-weight: 100;
 }
 
 * {
@@ -13,6 +21,7 @@
 body {
     align-content: center;
     margin: 0 auto;
+    font-family: var(--font-family);
 }
 
 header,
