@@ -108,8 +108,8 @@ main {
 
 footer {
     text-align: center;
-    margin: 1rem 0;
     padding: 2rem;
+    margin: 1rem 0 0;
     background-color: var(--secondary-color);
     color: black;
     align-items: center;
