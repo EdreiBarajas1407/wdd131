@@ -36,4 +36,16 @@
     nav .active {
         background-color: rgba(0, 0, 0, 0.3);
     }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
 }

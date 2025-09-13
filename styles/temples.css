@@ -19,9 +19,8 @@
 }
 
 body {
-    max-width: 640px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
     font-family: var(--font-family);
     text-align: center;
 }
@@ -32,6 +31,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+header span {
+    display: block;
+    font-size: 30px;
+    padding: 2rem;
 }
 
 h1 {
@@ -92,6 +97,13 @@ nav a {
 
 .open a {
     display: block;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 footer {
