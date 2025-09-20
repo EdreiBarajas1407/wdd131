@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Czech Republic</title>
+    <meta name="description"
+        content="Page created to give explanation about Czech Republic, using different methods to create this web page. HTML, CSS, JavaScript and using the concepts of responsive images.">
+    <meta name="author" content="Edrei Barajas">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Czech Republic</h1>
+    </header>
+    <main class="container">
+        <div class="hero-section">
+            <picture class="hero">
+                <source media="(min-width: 1000px)" srcset="images/prague-large.webp">
+                <source media="(min-width: 620px)" srcset="images/prague-small.webp">
+                <img src="images/prague-small.webp" alt="Czech Republic">
+            </picture>
+        </div>
+        <div class="data">
+            <h2 class="box-title">Data</h2>
+            <table>
+                <tr>
+                    <td class="label"><b>Area:</b></td>
+                    <td>78,871 km²</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Population:</b></td>
+                    <td>10,900,555</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Capital:</b></td>
+                    <td>Prague</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Languages:</b></td>
+                    <td>Czech</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Currency:</b></td>
+                    <td>Czech Koruna (CZK)</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Time Zone:</b></td>
+                    <td>CET(UTC+01:00)</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Calling Code:</b></td>
+                    <td>+420</td>
+                </tr>
+                <tr>
+                    <td class="label"><b>Internet TLD:</b></td>
+                    <td>.cz</td>
+                </tr>
+            </table>
+        </div>
+        <div class="weather">
+            <h2 class="box-title">Weather <span class="weather-icon">&#9925;</span></h2>
+            <img src="images/weather-icon.svg" alt="cloudy">
+            <table>
+
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> | Edrei Barajas | Mexico</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+
+</html>
