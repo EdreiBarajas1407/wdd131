@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load Example</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="Edrei Barajas">
+
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="scripts/lazyload.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Lazy Load Demonstration</h1>
+    </header>
+    <main>
+        <picture>
+            <img src="https://picsum.photos/400/600?random=1" alt="Random Image" loading="lazy" width="400"
+                height="600">
+        </picture>
+        <picture><img src="https://picsum.photos/400/600?random=2" alt="Random Image" loading="lazy" width="400"
+                height="600">
+        </picture>
+        <picture><img src="https://picsum.photos/400/600?random=3" alt="Random Image" loading="lazy" width="400"
+                height="600">
+        </picture>
+        <picture><img src="https://picsum.photos/400/600?random=4" alt="Random Image" loading="lazy" width="400"
+                height="600">
+        </picture>
+        <picture><img src="https://picsum.photos/400/600?random=5" alt="Random Image" loading="lazy" width="400"
+                height="600">
+        </picture>
+        <picture><img src="https://picsum.photos/400/600?random=6" alt="Random Image" loading="lazy" width="400"
+                height="600">
+        </picture>
+    </main>
+    <footer>
+        <p>&copy;<span id="year"></span> &bull; Edrei Barajas &bull; Mexico</p>
+        <p>WDD230 - Front End Development</p>
+        <p class="last-modified">Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+
+</html>
