@@ -127,6 +127,7 @@ main {
 }
 
 .temple-card img {
+    aspect-ratio: 16/9;
     width: 400px;
     height: 225px;
     overflow: hidden;
