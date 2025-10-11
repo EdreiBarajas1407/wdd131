@@ -332,14 +332,22 @@ form input[type="submit"] {
 }
 
 /*Album page*/
+.picture-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    justify-content: center;
+}
+
 .picture-card {
     padding-top: 2.5rem;
 }
 
 .picture-card img {
-    aspect-ratio: 16/9;
-    width: 400px;
-    height: 225px;
+    width: 100%;
+    height: auto;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
