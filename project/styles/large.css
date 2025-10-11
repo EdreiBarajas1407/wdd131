@@ -46,8 +46,21 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .region-grid {
-        grid-template-columns: 1fr;
+    .season-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .bubble-container {
+        bottom: 330px;
+        right: 40px;
+    }
+
+    .bubble-activator {
+        width: 150px;
+        height: 80px;
+        padding: 12px;
+        font-size: 20px;
     }
 
     /* Info Page */
