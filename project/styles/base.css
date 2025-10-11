@@ -114,53 +114,163 @@ header:has(.navigation.open) h1 {
     display: block;
 }
 
+#visit-message {
+    text-align: center;
+}
+
 #hero {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 60vh;
+    overflow: hidden;
 }
 
 #hero img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 600px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.quick-facts {
+    padding: 3rem 2rem;
+    background: #f8f9fa;
+}
+
+.fact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-5px);
+}
+
+.seasonal-guide {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.season-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.season-card {
+    background: white;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.season-card:hover {
+    transform: scale(1.05);
+}
+
+.membership-teaser {
+    padding: 4rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.teaser-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 
 .bubble-container {
-    position: relative;
-    margin: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    z-index: 1000;
 }
 
 .bubble-activator {
     background: #ffd93b;
     border: none;
     border-radius: 50%;
-    padding: 10px;
-    font-size: 20px;
+    padding: 15px;
+    font-size: 24px;
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bubble-activator:hover {
     transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .bubble-content {
     position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 70px;
+    right: 0;
+    transform: translateX(0);
     background: #fff8dc;
-    padding: 10px 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     display: none;
-    max-width: 250px;
+    max-width: 280px;
     text-align: center;
     font-size: 14px;
-    z-index: 100;
+    z-index: 1001;
+    border: 2px solid #ffd93b;
 }
 
 .bubble-content.show {
@@ -168,16 +278,43 @@ header:has(.navigation.open) h1 {
     animation: show 0.3s ease-out;
 }
 
-@keyframes show {
-    from {
-        opacity: 0;
-        transform: translate(-50%, 10px);
-    }
+.bubble-content::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff8dc;
+}
 
-    to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
+.bubble-activator.pulse {
+    animation: pulse 2s infinite;
+}
+
+.bubble-container {
+    bottom: 330px;
+    right: 40px;
+}
+
+.bubble-activator {
+    width: 150px;
+    height: 80px;
+    padding: 12px;
+    font-size: 20px;
+}
+
+.bubble-content {
+    bottom: 60px;
+    right: 0;
+    max-width: 250px;
+    font-size: 13px;
+}
+
+.bubble-content::after {
+    right: 15px;
 }
 
 

@@ -39,19 +39,66 @@
     </header>
 
     <main>
+        <h2>Thank You for Visiting our Page</h2>
+        <p id="visit-message"></p>
         <section id="hero">
-            <img src="images/prague-large.webp" alt="Hero Image">
+            <img src="images/prague-large.webp" alt="Prague Cityscape" loading="lazy">
+            <div class="hero-text">
+                <h2>Discover Czech Republic's Hidden Gems</h2>
+                <p>Beyond Prague lies a world of castles, forests, and charming towns waiting to be explored</p>
+            </div>
         </section>
-
+        <section class="quick-facts">
+            <div class="fact-grid">
+                <div class="fact-card">
+                    <h3>2,000+ Castles</h3>
+                    <p>Most castles per capita in the world</p>
+                </div>
+                <div class="fact-card">
+                    <h3>#1 Beer Consumption</h3>
+                    <p>World's highest beer consumption per person</p>
+                </div>
+                <div class="fact-card">
+                    <h3>12 UNESCO Sites</h3>
+                    <p>Rich cultural heritage recognized worldwide</p>
+                </div>
+            </div>
+        </section>
         <div class="bubble-container">
-            <button class="bubble-actvator" onclick="showData(this)">
-                💡
+            <button class="bubble-activator" onclick="showData(this)">
+                💡 Fun Fact!
             </button>
-
             <div class="bubble-content">
             </div>
         </div>
-        </div>
+        <section class="seasonal-guide">
+            <h2>Best Time to Visit</h2>
+            <div class="season-cards">
+                <div class="season-card" data-season="spring">
+                    <h4>🌸 Spring 🌸</h4>
+                    <p>Flowering gardens & Easter markets</p>
+                </div>
+                <div class="season-card" data-season="summer">
+                    <h4>☀️ Summer ☀️</h4>
+                    <p>Festivals & castle tours</p>
+                </div>
+                <div class="season-card" data-season="autumn">
+                    <h4>🍂 Autumn 🍂</h4>
+                    <p>Wine harvest & colorful forests</p>
+                </div>
+                <div class="season-card" data-season="winter">
+                    <h4>❄️ Winter ❄️</h4>
+                    <p>Christmas markets & skiing</p>
+                </div>
+            </div>
+        </section>
+        <section class="membership-teaser">
+            <div class="teaser-content">
+                <h2>Ready for a Real Adventure?</h2>
+                <p>Join our community and get exclusive access to local guides, hidden spots, and special events</p>
+                <a href="attractions.html" class="cta-button">Join Us in this Journey</a>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy;<span id="year"></span> | Edrei Barajas | Adventures in the Heart of Europe | WDD131 Project</p>

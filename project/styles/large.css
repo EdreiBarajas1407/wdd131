@@ -37,6 +37,19 @@
         background-color: rgba(0, 0, 0, 0.3);
     }
 
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .fact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .region-grid {
+        grid-template-columns: 1fr;
+    }
+
     /* Info Page */
     .sidebar {
         width: 100%;
