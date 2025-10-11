@@ -498,15 +498,15 @@ form input[type="submit"] {
     border-right: solid 8px green;
 }
 
-.thank-you {
+.confirmation {
     margin: 0 1rem;
 }
 
-.thank-you h1 {
+.confirmation h1 {
     padding: 2rem 1rem;
 }
 
-.thank-you p {
+.confirmation p {
     padding-bottom: .5rem;
 }
 
