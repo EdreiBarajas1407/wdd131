@@ -45,105 +45,107 @@ const pictures = [
         pictureName: "Prague Castle",
         location: "Prague, Czech Republic",
         foundation: "9th Century",
-        imageUrl: "https://d3dqioy2sca31t.cloudfront.net/Projects/cms/production/000/037/138/large/b49afd389a3bbedfa9ff41b5f43f2e5e/article-czech-republic-prague-castle.jpg"
+        img: "./images/castle-1.webp"
     },
     {
         pictureName: "Charles Bridge",
         location: "Prague, Czech Republic",
         foundation: "1357",
-        imageUrl: "https://discoveringprague.com/wp-content/uploads/2023/10/Charles-Bridge.jpg.webp"
+        img: "./images/bridge-2.jpg.webp"
     },
     {
         pictureName: "Český Krumlov Castle",
         location: "Český Krumlov, Czech Republic",
         foundation: "13th Century",
-        imageUrl: "https://dynamic-media.tacdn.com/media/photo-o/2e/db/22/a3/caption.jpg?w=1100&h=800&s=1"
+        img: "./images/krum-castle.webp"
     },
     {
         pictureName: "Karlštejn Castle",
         location: "Central Bohemia, Czech Republic",
         foundation: "1348",
-        imageUrl: "https://images.squarespace-cdn.com/content/v1/5a18683b64b05f9f4adeb4c7/fc551213-4cb4-4cae-991f-1a5fff863dd7/karlstejn+castle.jpeg?format=2500w"
+        img: "./images/karlstejn-castle.webp"
     },
     {
         pictureName: "Bohemian Switzerland",
         location: "Northern Bohemia, Czech Republic",
         foundation: "Natural Formation",
-        imageUrl: "https://dynamic-media.tacdn.com/media/photo-o/2e/db/35/5e/caption.jpg?w=1100&h=800&s=1"
+        img: "./images/bohemian.webp"
     },
     {
         pictureName: "Telč Historic Centre",
         location: "Telč, Czech Republic",
         foundation: "14th Century",
-        imageUrl: "https://whc.unesco.org/uploads/thumbs/site_0621_0013-594-0-20140623151316.jpg"
+        img: "./images/telč.webp"
     },
     {
         pictureName: "Karlovy Vary Colonnades",
         location: "Karlovy Vary, Czech Republic",
         foundation: "14th Century",
-        imageUrl: "https://sustaineurope.com/images/mlynska-kolonada_mill-colonnade-(6).jpg?crc=70404377"
+        img: "./images/colonnades.webp"
     },
     {
         pictureName: "Lednice-Valtice Cultural Landscape",
         location: "South Moravia, Czech Republic",
         foundation: "17th Century",
-        imageUrl: "https://www.amazingczechia.com/wp-content/uploads/2018/04/lednice-valtice-02xm.jpg.webp"
+        img: "./images/lednice.webp"
     },
     {
         pictureName: "Adršpach Rocks",
         location: "Eastern Bohemia, Czech Republic",
         foundation: "Natural Formation",
-        imageUrl: "https://3seaseurope.com/wp-content/uploads/2023/02/rock-2.webp"
+        img: "./images/adršpach.webp"
     },
     {
         pictureName: "Kutná Hora Historical Centre",
         location: "Kutná Hora, Czech Republic",
         foundation: "13th Century",
-        imageUrl: "https://www.amazingczechia.com/wp-content/uploads/2018/07/kutna-hora-02.jpg"
+        img: "./images/kutna-2.webp"
     },
     {
         pictureName: "Moravian Karst",
         location: "South Moravia, Czech Republic",
         foundation: "Natural Formation",
-        imageUrl: "https://www.zamek-lysice.cz/pamatky/lysice/fotogalerie/tipy_na_vylet/image-thumb__35937__HeaderImage/moravsky_kras_w14.webp"
+        img: "./images/moravian.webp"
     },
     {
         pictureName: "Český ráj (Bohemian Paradise)",
         location: "Northern Bohemia, Czech Republic",
         foundation: "Natural Formation",
-        imageUrl: "https://img.atlasobscura.com/nVTj9pBLNFzNjiFvDYUmY_bK--erJgJKjYHuFHftZG0/rt:fit/w:1200/q:80/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9lMWM0/NzMyYy1hZjMxLTQ0/MDgtOTlhZC04MmY0/MTU0NjEwZWY4ZTBj/M2VhY2E5NTgzOTMx/NzlfQ8yMZXNrecyB/IHJhzIFqIDYuanBn.webp"
+        img: "./images/paradise.webp"
     }
 ];
 
-const pictureContainer = document.getElementById("pictureContainer");
+document.addEventListener("DOMContentLoaded", () => {
+    const pictureContainer = document.getElementById("pictureContainer");
 
-const displayPictures = (picturesArray) => {
-    pictureContainer.innerHTML = "";
+    const displayPictures = (picturesArray) => {
+        pictureContainer.innerHTML = "";
 
-    picturesArray.forEach((picture) => {
-        const card = document.createElement("div");
-        card.className = "picture-card";
+        picturesArray.forEach((picture) => {
+            const card = document.createElement("div");
+            card.className = "picture-card";
 
-        const name = document.createElement("h1");
-        name.textContent = picture.pictureName;
-        card.appendChild(name);
+            const name = document.createElement("h1");
+            name.textContent = picture.pictureName;
+            card.appendChild(name);
 
-        const location = document.createElement("p");
-        location.textContent = `Location: ${picture.location}`;
-        card.appendChild(location);
+            const location = document.createElement("p");
+            location.textContent = `Location: ${picture.location}`;
+            card.appendChild(location);
 
-        const foundation = document.createElement("p");
-        foundation.textContent = `Founded: ${picture.foundation}`;
-        card.appendChild(foundation);
+            const foundation = document.createElement("p");
+            foundation.textContent = `Founded: ${picture.foundation}`;
+            card.appendChild(foundation);
 
-        const image = document.createElement("img");
-        image.src = picture.imageUrl;
-        image.alt = picture.pictureName;
-        image.loading = "lazy";
-        card.appendChild(image);
+            const image = document.createElement("img");
+            image.src = picture.img;
+            image.alt = picture.pictureName;
+            image.loading = "lazy";
+            card.appendChild(image);
 
-        pictureContainer.appendChild(card);
-    });
-};
+            pictureContainer.appendChild(card);
+        });
+    };
 
-displayPictures(pictures);
+    displayPictures(pictures);
+});
