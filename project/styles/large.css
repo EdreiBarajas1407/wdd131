@@ -76,4 +76,26 @@
         box-shadow: 0 0 50px #333;
     }
 
+    /*Attractions Page*/
+
+    fieldset {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        margin: 1rem auto;
+        padding: 1rem;
+        max-width: 640px;
+    }
+
+    /*Album Page*/
+
+    .picture-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+        margin: 0 auto;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
 }

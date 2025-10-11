@@ -24,7 +24,7 @@
 <body>
 
     <header>
-        <a href="index.html"><img class="logo" src="images/Flag-map_of_the_Czech_Republic.svg.png" alt="logo"></a>
+        <a href="index.html"><img class="logo" src="images/logo.webp" alt="logo"></a>
         <h1>Adventures in the Heart of Europe</h1>
         <nav>
             <ul class="navigation">
@@ -38,6 +38,57 @@
     </header>
 
     <main>
+
+        <form method="get" action="thankyou.html" class="wf1">
+            <fieldset>
+                <legend>Join Us in this Journey</legend>
+                <label>First Name*<input type="text" id="fname" name="fname" required></label>
+                <label>Last Name*<input type="text" id="lname" name="lname" required></label>
+                <label>Preferred Name<input type="text" name="Preferred" id="Preferred"
+                        pattern="^[A-Za-z\- ]{7,}$"></label>
+                <label>Email*<input type="email" name="email" id="email" placeholder="myname@gmail.com"
+                        required></label>
+                <label>Phone Number* <input type="tel" name="phone" id="phone" required></label>
+                <div class="container">
+                    <div class="form-container">
+                        <label>Membership Level:</label>
+                        <select id="membership" name="membership" required>
+                            <option value="" disabled selected>Select your adventure level</option>
+                            <option value="np">Prague Prowler (Free)</option>
+                            <option value="bronze">Bohemian Wanderer (490 Kč/year)</option>
+                            <option value="silver">Moravian Explorer (990 Kč/year)</option>
+                            <option value="gold">Czech Connoisseur (1,990 Kč/year)</option>
+                        </select>
+                        <div class="benefits-container">
+                            <h2>Membership Benefits</h2>
+                            <ul>
+                                <li><strong>Prague Prowler (Free):</strong> Access to our public Prague city walks &
+                                    monthly newsletter with hidden gems.</li>
+                                <br>
+                                <li><strong>Bohemian Wanderer (490 Kč/24 $):</strong> Free benefits + Guided trips to
+                                    Bohemian castles & nature parks (e.g., Český ráj), 10% discount in traditional Czech
+                                    craft shops.</li>
+                                <br>
+                                <li><strong>Moravian Explorer (990 Kč/48 $):</strong> Bohemian benefits + Wine tasting
+                                    tours
+                                    in Moravia, "Taste of Czech" culinary event discounts, Priority booking for seasonal
+                                    trips (e.g., mushroom foraging).</li>
+                                <br>
+                                <li><strong>Czech Connoisseur (1,990 Kč/95 $):</strong> Moravian benefits + Private tour
+                                    of a
+                                    Prague monastery or brewery, "Bring a Friend" on one trip for free, Personalized
+                                    itinerary planning for your private travels in CZ.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <label>Group Description</label>
+                <textarea name="description" id="description" rows="3" cols="20"
+                    placeholder="Enter a brief description of your organization..."></textarea>
+                <input id="submit" type="submit" value="Join Us">
+            </fieldset>
+            <input type="hidden" id="timestamp" name="timestamp">
+        </form>
 
     </main>
     <footer>
