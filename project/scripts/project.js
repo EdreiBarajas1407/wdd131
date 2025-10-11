@@ -117,6 +117,10 @@ const pictures = [
 
 document.addEventListener("DOMContentLoaded", () => {
     const pictureContainer = document.getElementById("pictureContainer");
+    if (!pictureContainer) {
+        console.warn("pictureContainer not found — skipping image display");
+        return;
+    }
 
     const displayPictures = (picturesArray) => {
         pictureContainer.innerHTML = "";
@@ -138,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
             card.appendChild(foundation);
 
             const image = document.createElement("img");
-            image.src = picture.img;
+            image.src = picture.imageUrl || picture.img || "";
             image.alt = picture.pictureName;
             image.loading = "lazy";
             card.appendChild(image);
@@ -149,6 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     displayPictures(pictures);
 });
+
 
 //visit message//
 document.addEventListener("DOMContentLoaded", function () {
